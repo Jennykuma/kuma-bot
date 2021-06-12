@@ -24,8 +24,8 @@ const chooseMap = (): string => {
 }
 
 discordClient.on('ready', () => {
-  console.log(`Logged in as ${discordClient?.user?.tag}!`)
-})
+  console.log(`Logged in as ${discordClient?.user?.tag}!`);
+});
 
 discordClient.on('message', msg => {
   if (!msg.content.startsWith(prefix) || msg.author.bot) return;
@@ -39,4 +39,4 @@ discordClient.on('message', msg => {
   } else if (msg.content === `${prefix} racist`) {
     msg.reply('This is an inclusive community. There is no room for racism here! 😠')
   }
-})
+});
