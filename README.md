@@ -1,5 +1,8 @@
 # kuma-bot
 
+## Trello Board
+https://trello.com/b/lB0h4nwX/kuma-bot
+
 ## Project setup
 ```
 npm install
