@@ -3,15 +3,22 @@
   "version": "1.0.0",
   "description": "",
   "main": "map-kuma.js",
+  "module": "commonjs",
   "dependencies": {
     "discord.js": "^12.5.3",
     "dotenv": "^10.0.0"
   },
   "devDependencies": {
-    "eslint": "^7.28.0"
+    "@types/node": "^15.12.2",
+    "eslint": "^7.28.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --project ./",
+    "lint": "eslint src --ext .ts",
+    "server": "node ./dist/kuma-bot.js"
   },
   "repository": {
     "type": "git",

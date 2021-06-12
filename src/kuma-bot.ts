@@ -1,21 +1,20 @@
-import * as dotenv from 'dotenv';
 import {Client} from 'discord.js';
 import ENV from './config';
 import {getAgents} from './Agent';
 import {maps, prefix } from './config.json';
 const discordClient = new Client();
-const env = dotenv.config();
 const agents = getAgents();
 
-
-discordClient.login(ENV.TOKEN)
+console.log('my token is');
+console.log(ENV.TOKEN);
+discordClient.login(ENV.TOKEN);
 
 const chooseAgent = () : string => {
   return agents[Math.floor(Math.random() * agents.length)].name;
 }
 
 const chooseAgents = () : string => {
-  let team = new Set();
+  let team : Set<String> = new Set();
   while (team.size < 5) { team.add(chooseAgent()) }
   return [...team].join(', ');
 }
@@ -25,7 +24,7 @@ const chooseMap = () : string => {
 }
 
 discordClient.on('ready', () => {
-  console.log(`Logged in as ${discordClient.user.tag}!`)
+  console.log(`Logged in as ${discordClient?.user?.tag}!`)
 })
 
 discordClient.on('message', msg => {
