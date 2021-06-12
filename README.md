@@ -7,6 +7,10 @@ https://trello.com/b/lB0h4nwX/kuma-bot
 ```
 npm install
 ```
+- Please fork this repo and set up upstream
+- Create PR's, don't commit directly to master :)
+- Thanks!
+
 ## How to run locally
 1. Create an .env file
 2. Refer to the .env.template file for your .env file
