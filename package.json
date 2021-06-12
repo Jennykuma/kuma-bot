@@ -1,0 +1,26 @@
+{
+  "name": "map-kuma",
+  "version": "1.0.0",
+  "description": "",
+  "main": "map-kuma.js",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.28.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jennykuma/map-kuma.git"
+  },
+  "author": "Jenny Le",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jennykuma/map-kuma/issues"
+  },
+  "homepage": "https://github.com/Jennykuma/map-kuma#readme"
+}
