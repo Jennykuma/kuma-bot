@@ -5,8 +5,6 @@ import { maps, prefix } from './config.json';
 const discordClient = new Client();
 const agents = getAgents();
 
-console.log('my token is');
-console.log(ENV.TOKEN);
 discordClient.login(ENV.TOKEN);
 
 const chooseAgent = (): string => {
