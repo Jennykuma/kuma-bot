@@ -21,3 +21,11 @@ npm install
 7. Put that token in your .env
 8. npm run build (this compiles the typescript and transposes it into JS files)
 9. npm run server
+
+
+## How to deploy to Heroku
+1. Create a Heroku account and install Heroku CLI (https://devcenter.heroku.com/articles/heroku-cli)
+2. Push changes to main branch 
+3. Run the command `heroku login`
+4. Run the command `heroku git:remote -a frozen-tor-28234` in the root directory of kuma-bot.
+5. Run the command `git push heroku main`
