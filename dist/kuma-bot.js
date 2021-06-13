@@ -30,8 +30,6 @@ var Agent_1 = require("./Agent");
 var config_json_1 = require("./config.json");
 var discordClient = new discord_js_1.Client();
 var agents = Agent_1.getAgents();
-console.log('my token is');
-console.log(config_1.default.TOKEN);
 discordClient.login(config_1.default.TOKEN);
 var chooseAgent = function () {
     return agents[Math.floor(Math.random() * agents.length)].name;
@@ -51,18 +49,19 @@ discordClient.on('ready', function () {
     console.log("Logged in as " + ((_a = discordClient === null || discordClient === void 0 ? void 0 : discordClient.user) === null || _a === void 0 ? void 0 : _a.tag) + "!");
 });
 discordClient.on('message', function (msg) {
-    if (!msg.content.startsWith(config_json_1.prefix) || msg.author.bot)
+    var cmd = msg.content.toLowerCase();
+    if (!cmd.startsWith(config_json_1.prefix) || msg.author.bot)
         return;
-    if (msg.content === config_json_1.prefix + " map") {
+    if (cmd === config_json_1.prefix + " map") {
         msg.reply('Kuma chooses **' + chooseMap() + '**! Good luck friends 🐻');
     }
-    else if (msg.content === config_json_1.prefix + " agent") {
+    else if (cmd === config_json_1.prefix + " agent") {
         msg.reply('Kuma chooses **' + chooseAgent() + '**! 🐻');
     }
-    else if (msg.content === config_json_1.prefix + " team") {
+    else if (cmd === config_json_1.prefix + " team") {
         msg.reply('Kuma chooses **' + chooseAgents() + '** in that order! Good luck friends 🐻');
     }
-    else if (msg.content === config_json_1.prefix + " racist") {
+    else if (cmd === config_json_1.prefix + " racist") {
         msg.reply('This is an inclusive community. There is no room for racism here! 😠');
     }
 });

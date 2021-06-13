@@ -26,15 +26,17 @@ discordClient.on('ready', () => {
 });
 
 discordClient.on('message', msg => {
-  if (!msg.content.startsWith(prefix) || msg.author.bot) return;
+  let cmd = msg.content.toLowerCase();
+  if (!cmd.startsWith(prefix) || msg.author.bot) return;
 
-  if (msg.content === `${prefix} map`) {
+  
+  if (cmd === `${prefix} map`) {
     msg.reply('Kuma chooses **' + chooseMap() + '**! Good luck friends 🐻')
-  } else if (msg.content === `${prefix} agent`) {
+  } else if (cmd === `${prefix} agent`) {
     msg.reply('Kuma chooses **' + chooseAgent() + '**! 🐻')
-  } else if (msg.content === `${prefix} team`) {
+  } else if (cmd === `${prefix} team`) {
     msg.reply('Kuma chooses **' + chooseAgents() + '** in that order! Good luck friends 🐻')
-  } else if (msg.content === `${prefix} racist`) {
+  } else if (cmd === `${prefix} racist`) {
     msg.reply('This is an inclusive community. There is no room for racism here! 😠')
   }
 });
