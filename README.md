@@ -19,4 +19,5 @@ npm install
 5. Use that link to invite your bot to a discord server. Preferably create a private discord server for your own testing reasons
 6. Get your token. Don't show this to anyone!!!
 7. Put that token in your .env
-8. Run node kuma-bot.js in your terminal
+8. npm run build (this compiles the typescript and transposes it into JS files)
+9. npm run server
