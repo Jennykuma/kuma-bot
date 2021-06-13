@@ -1,11 +1,10 @@
-import { Client } from 'discord.js';
 import ENV from './config';
 import { getAgents } from './Agent';
 import { maps, prefix } from './config.json';
-const discordClient = new Client();
+import { initDiscordClient, getChannel } from './helpers/discord';
 const agents = getAgents();
 
-discordClient.login(ENV.TOKEN);
+const discordClient = initDiscordClient(ENV.TOKEN);
 
 const chooseAgent = (): string => {
   return agents[Math.floor(Math.random() * agents.length)].name;
