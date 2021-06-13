@@ -26,7 +26,7 @@ discordClient.on('ready', () => {
 });
 
 discordClient.on('message', msg => {
-  let cmd = msg.content.toLowerCase();
+  const cmd = msg.content.toLowerCase();
   if (!cmd.startsWith(prefix) || msg.author.bot) return;
 
   
