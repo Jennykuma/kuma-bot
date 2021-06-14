@@ -8,5 +8,9 @@ export const initDiscordClient = (token:string) : Client => {
 
 export const getChannel = (discordClient:Client, msg:Message) : Channel => {
     const channelID = msg.member?.voice.channelID;
-    return discordClient.channels.cache.get(channelID!)!
+    return discordClient.channels.cache.get(channelID!)!;
+}
+
+export const getUsers = (channel:any) : Array<String> => {
+    return channel.members.map((member: any) => member.user);
 }
