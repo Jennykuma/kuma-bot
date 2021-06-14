@@ -41,8 +41,8 @@ const assignAgents = (msg:any): string => {
   var response = "has decided! \n\n";
 
   if(usersLength < 5){   
+    const agents = chooseAgents(usersLength);
     for(let member of users){
-      const agents = chooseAgents(usersLength);
       response += `I choose ${member.toString()} to play **${agents.pop()}**!\n`;
     }
   } else {
