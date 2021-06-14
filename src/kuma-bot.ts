@@ -30,6 +30,11 @@ const chooseMap = (): string => {
 
 const assignAgents = (msg:any): string => {
   const channel: any = getChannel(discordClient, msg);
+
+  if(!channel){
+    return "You aren't connected to a voice channel so I cannot create a team, sorry! Please join a voice channel and retry! 🐻"
+  }
+
   const users = getUsers(channel);
   const usersLength = users.length;
 
