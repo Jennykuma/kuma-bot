@@ -4,7 +4,7 @@ export interface IWeapon {
     price: Number;
 }
 const SIDEARM = 'Side Arm';
-const ASSAULTRIFLE = 'Assult Rifle';
+const ASSAULTRIFLE = 'Assault Rifle';
 const SUBMACHINEGUN = 'Sub Machine Gun';
 const MACHINEGUN = 'Machine Gun';
 const SNIPER = 'Sniper';
