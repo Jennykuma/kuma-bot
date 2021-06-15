@@ -19,8 +19,7 @@ npm install
 5. Use that link to invite your bot to a discord server. Preferably create a private discord server for your own testing reasons
 6. Get your token. Don't show this to anyone!!!
 7. Put that token in your .env
-8. npm run build (this compiles the typescript and transposes it into JS files)
-9. npm run server
+8. npm run local (this starts ts-node-dev, which rebuilds Typescript files on save)
 
 
 ## How to deploy to Heroku
