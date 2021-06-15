@@ -1,6 +1,6 @@
 import ENV from './config';
 import { getAgents } from './Agent';
-import { maps, prefix } from './config.json';
+import { maps, prefix } from './static_data.json';
 import { initDiscordClient, getChannel, getUsers } from './helpers/discord';
 const agents = getAgents();
 

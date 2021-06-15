@@ -23,7 +23,8 @@
     "build": "tsc --project ./",
     "lint": "eslint src --ext .ts",
     "server": "node ./dist/kuma-bot.js",
-    "dev": "nodemon ./dist/kuma-bot.js"
+    "dev": "nodemon ./dist/kuma-bot.js",
+    "local": "npx ts-node-dev ./src/kuma-bot.ts"
   },
   "repository": {
     "type": "git",
