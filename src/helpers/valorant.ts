@@ -1,5 +1,5 @@
 import { getAgents } from '../Agent';
-import { maps } from '../config.json';
+import { maps } from '../static_data.json';
 import { getChannel, getUsers } from './discord';
 import { shuffleArray } from './common';
 import { Client } from 'discord.js';
