@@ -4,6 +4,7 @@ import { getChannel, getUsers } from './discord';
 import { getWeapons, IWeapon } from '../Weapon';
 import { shuffleArray } from './common';
 import { Client } from 'discord.js';
+import { clone } from 'lodash';
 
 const agents = getAgents();
 
@@ -28,31 +29,32 @@ export const assignAgents = (discordClient: Client, msg: any): string => {
     }
   } else {
     let shuffledUsers: Array<string> = shuffleArray(users);
+    let chosenUsers = clone(shuffledUsers);
 
     if (usersLength > 10) {
-      const chosenUsers = shuffledUsers.splice(0, 10);
-      const unchosenUsers = shuffledUsers;
-      shuffledUsers = chosenUsers;
+      chosenUsers = shuffledUsers.splice(0, 10);
+      let unchosenUsers = shuffledUsers;
 
+      response += `**👀 Spectators 👀**\n`
       for (let user of unchosenUsers) {
         response += `Sorry ${user.toString()}, I didn't pick you to play this time!\n`;
       }
       response += '\n';
     }
 
-    const team1 = shuffledUsers.slice(0, usersLength / 2);
-    const team2 = shuffledUsers.slice(- usersLength / 2);
+    const team1 = chosenUsers.splice(0, 5);
+    const team2 = chosenUsers
     const team1Agents = chooseAgents(team1.length);
     const team2Agents = chooseAgents(team2.length);
 
-    response += `**Team A:**\n`
+    response += `**⚔ Attackers ⚔**\n`
     for (let member of team1) {
       response += `I choose ${member.toString()} to play **${team1Agents.pop()}**!\n`;
     }
 
     response += '\n';
 
-    response += `**Team B:**\n`
+    response += `**🛡 Defenders 🛡**\n`
     for (let member of team2) {
       response += `I choose ${member.toString()} to play **${team2Agents.pop()}**!\n`;
     }
@@ -66,7 +68,7 @@ export const chooseAgent = (): string => {
   return agents[Math.floor(Math.random() * agents.length)].name;
 }
 
-export const chooseAgents = (size:number) : Array<String> => {
+export const chooseAgents = (size: number): Array<String> => {
   let team: Set<String> = new Set();
   while (team.size < size) { team.add(chooseAgent()) }
   return [...team];
@@ -82,7 +84,7 @@ const randomWeapon = (): IWeapon => {
 
 export const chooseWeapon = (price: Number): IWeapon => {
   let weaponOfChoice = randomWeapon();
-  while(price < weaponOfChoice.price){
+  while (price < weaponOfChoice.price) {
     weaponOfChoice = randomWeapon();
   }
 
