@@ -1,10 +1,13 @@
 import { getAgents } from '../Agent';
 import { maps } from '../static_data.json';
 import { getChannel, getUsers } from './discord';
+import { getWeapons, IWeapon } from '../Weapon';
 import { shuffleArray } from './common';
 import { Client } from 'discord.js';
 
 const agents = getAgents();
+
+const weapons = getWeapons();
 
 export const assignAgents = (discordClient: Client, msg: any): string => {
   const channel = getChannel(discordClient, msg);
@@ -71,4 +74,17 @@ export const chooseAgents = (size:number) : Array<String> => {
 
 export const chooseMap = (): string => {
   return maps[Math.floor(Math.random() * maps.length)]
+}
+
+const randomWeapon = (): IWeapon => {
+  return weapons[Math.floor(Math.random() * weapons.length)];
+}
+
+export const chooseWeapon = (price: Number): IWeapon => {
+  let weaponOfChoice = randomWeapon();
+  while(price < weaponOfChoice.price){
+    weaponOfChoice = randomWeapon();
+  }
+
+  return weaponOfChoice;
 }

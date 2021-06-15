@@ -14,7 +14,7 @@ discordClient.on('ready', () => {
 });
 
 discordClient.on('message', (msg:any) => {
-  if (!msg.content.startsWith(prefix) || msg.author.bot) return;
+  if (!msg.content.toLowerCase().startsWith(prefix) || msg.author.bot) return;
 
 	const args = msg.content.slice(prefix.length).trim().split(/ +/);
 	const command = args.shift().toLowerCase();
