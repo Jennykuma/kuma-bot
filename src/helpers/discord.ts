@@ -1,5 +1,6 @@
 import { Client, Channel, Message, Collection } from 'discord.js';
 import fs from 'fs';
+import p from 'path';
 
 export const initDiscordClient = (token: string): Client => {
     const discordClient = new Client();
@@ -9,7 +10,7 @@ export const initDiscordClient = (token: string): Client => {
 
 export const getCommandFiles = (discordClient: any, path: string): Array<String> => {
     discordClient.commands = new Collection();
-    return fs.readdirSync(path + "/commands").filter(file => file.endsWith('.ts'));
+    return fs.readdirSync(p.join(path, 'commands')).filter(file => file.endsWith('.ts'));
 }
 
 export const getChannel = (discordClient: Client, msg: Message): Channel => {
