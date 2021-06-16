@@ -1,13 +1,12 @@
 import ENV from './config';
 import { prefix } from './static_data.json';
 import { initDiscordClient, getCommandFiles } from './helpers/discord';
+import p from 'path';
 
 const discordClient: any = initDiscordClient(ENV.TOKEN);
 const commandFiles = getCommandFiles(discordClient, __dirname);
-console.log(`\nBefore entering the loop to load commands (Path: ${process.cwd()}):\n`);
 for (const file of commandFiles) {
-  const command = require(`./commands/${file}`);
-  console.log(command.name);
+  const command = require(p.join(__dirname, 'commands', `${file}`));
   discordClient.commands.set(command.name, command);
 }
 
