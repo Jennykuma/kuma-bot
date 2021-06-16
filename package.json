@@ -1,5 +1,5 @@
 {
-  "name": "Kuma-Bot",
+  "name": "kuma-bot",
   "version": "1.0.0",
   "description": "",
   "main": "./kuma-bot.js",
@@ -7,7 +7,9 @@
   "dependencies": {
     "discord.js": "^12.5.3",
     "dotenv": "^10.0.0",
-    "typescript": "^4.3.2"
+    "typescript": "^4.3.2",
+    "@types/lodash": "^4.14.170",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.170",
