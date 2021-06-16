@@ -6,6 +6,7 @@ const discordClient: any = initDiscordClient(ENV.TOKEN);
 const commandFiles = getCommandFiles(discordClient, __dirname);
 for (const file of commandFiles) {
   const command = require(`./commands/${file}`);
+  console.log(command.name);
   discordClient.commands.set(command.name, command);
 }
 
