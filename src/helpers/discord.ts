@@ -10,7 +10,7 @@ export const initDiscordClient = (token: string): Client => {
 
 export const getCommandFiles = (discordClient: any, path: string): Array<String> => {
     discordClient.commands = new Collection();
-    return fs.readdirSync(p.join(path, 'commands')).filter(file => file.endsWith('.ts'));
+    return fs.readdirSync(p.join(path, 'commands'));
 }
 
 export const getChannel = (discordClient: Client, msg: Message): Channel => {
