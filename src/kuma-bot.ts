@@ -4,6 +4,7 @@ import { initDiscordClient, getCommandFiles } from './helpers/discord';
 
 const discordClient: any = initDiscordClient(ENV.TOKEN);
 const commandFiles = getCommandFiles(discordClient, __dirname);
+console.log(`\nBefore entering the loop to load commands (Path: ${process.cwd()}):\n`);
 for (const file of commandFiles) {
   const command = require(`./commands/${file}`);
   console.log(command.name);
