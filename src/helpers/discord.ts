@@ -29,7 +29,7 @@ export const successMsgEmbeded = (author: User, imageUrl: string,
     .setAuthor(author.username, author.avatarURL() || undefined)
     .addField(contentTitle, contentBody)
     .setImage(imageUrl)
-    .setFooter(`Kuma chooses **${contentTitle}**! 🐻`,`https://images2.minutemediacdn.com/image/upload/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/shape/cover/sport/dataimagepngbase64iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQ-5c25ab474761c20eff12f3747706b967.jpg`);
+    .setFooter(`Kuma chooses ${contentTitle}! 🐻`,`https://images2.minutemediacdn.com/image/upload/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/shape/cover/sport/dataimagepngbase64iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQ-5c25ab474761c20eff12f3747706b967.jpg`);
 
     return msgEmeded;
 }
