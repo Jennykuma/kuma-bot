@@ -1,4 +1,4 @@
-interface IAgent {
+export interface IAgent {
     name: string;
     role: string;
 }

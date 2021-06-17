@@ -1,7 +1,8 @@
-import { getAgents } from '../Agent';
+import { getAgents, IAgent } from '../Agent';
 import { maps } from '../static_data.json';
 import { getChannel, getUsers } from './discord';
 import { getWeapons, IWeapon } from '../Weapon';
+import { getImage } from '../Images';
 import { shuffleArray } from './common';
 import { Client } from 'discord.js';
 import { clone } from 'lodash';
@@ -68,6 +69,10 @@ export const chooseAgent = (): string => {
   return agents[Math.floor(Math.random() * agents.length)].name;
 }
 
+export const chooseAgentDetails = (): IAgent => {
+  return agents[Math.floor(Math.random() * agents.length)];
+}; 
+
 export const chooseAgents = (size: number): Array<String> => {
   let team: Set<String> = new Set();
   while (team.size < size) { team.add(chooseAgent()) }
@@ -89,4 +94,8 @@ export const chooseWeapon = (price: Number): IWeapon => {
   }
 
   return weaponOfChoice;
+}
+
+export const chooseImage = (name: string): string => {
+  return getImage().find(weapon => weapon.name === name)?.url || '';
 }
