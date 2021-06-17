@@ -1,5 +1,5 @@
-import { getAgents } from '../Agent';
-import { maps } from '../static_data.json';
+import { getAgents, IAgent } from '../Agent';
+import { getMaps, IMap } from '../Map';
 import { getChannel, getUsers } from './discord';
 import { getWeapons, IWeapon } from '../Weapon';
 import { shuffleArray } from './common';
@@ -7,7 +7,7 @@ import { Client } from 'discord.js';
 import { clone } from 'lodash';
 
 const agents = getAgents();
-
+const maps = getMaps();
 const weapons = getWeapons();
 
 export const assignAgents = (discordClient: Client, msg: any): string => {
@@ -68,14 +68,18 @@ export const chooseAgent = (): string => {
   return agents[Math.floor(Math.random() * agents.length)].name;
 }
 
+export const chooseAgentDetails = (): IAgent => {
+  return agents[Math.floor(Math.random() * agents.length)];
+}; 
+
 export const chooseAgents = (size: number): Array<String> => {
   let team: Set<String> = new Set();
   while (team.size < size) { team.add(chooseAgent()) }
   return [...team];
 }
 
-export const chooseMap = (): string => {
-  return maps[Math.floor(Math.random() * maps.length)]
+export const chooseMap = (): IMap => {
+  return maps[Math.floor(Math.random() * maps.length)];
 }
 
 const randomWeapon = (): IWeapon => {

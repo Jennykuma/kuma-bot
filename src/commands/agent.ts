@@ -1,10 +1,18 @@
 import { Message } from "discord.js";
-import { chooseAgent } from "../helpers/valorant";
+import { chooseAgentDetails } from "../helpers/valorant";
+import { successMsgEmbeded } from "../helpers/discord";
 
 module.exports = {
 	name: 'agent',
 	description: 'Returns a random agent',
 	execute(discordClient: any, message: Message, args: Array<string>) {
-		message.reply('Kuma chooses **' + chooseAgent() + '**! 🐻')
+
+		const agent = chooseAgentDetails();
+		const msgEmeded = successMsgEmbeded(message.author, 
+			agent.imgUrl,
+			agent.name,
+			agent.role);
+
+		message.channel.send(msgEmeded);
 	},
 };
