@@ -1,5 +1,5 @@
 import { Message } from "discord.js";
-import { chooseAgentDetails, chooseImage } from "../helpers/valorant";
+import { chooseAgentDetails } from "../helpers/valorant";
 import { successMsgEmbeded } from "../helpers/discord";
 
 module.exports = {
@@ -9,7 +9,7 @@ module.exports = {
 
 		const agent = chooseAgentDetails();
 		const msgEmeded = successMsgEmbeded(message.author, 
-			chooseImage(agent.name),
+			agent.imgUrl,
 			agent.name,
 			agent.role);
 

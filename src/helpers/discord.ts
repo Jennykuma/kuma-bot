@@ -1,4 +1,5 @@
 import { Client, Channel, Message, MessageEmbed ,Collection, User } from 'discord.js';
+import { ANGRY_BEAR_GIF, ANGRY_BEAR_STATIC, VALORANT_LOGO } from '../properties';
 import fs from 'fs';
 import p from 'path';
 
@@ -29,7 +30,7 @@ export const successMsgEmbeded = (author: User, imageUrl: string,
     .setAuthor(author.username, author.avatarURL() || undefined)
     .addField(contentTitle, contentBody)
     .setImage(imageUrl)
-    .setFooter(`Kuma chooses ${contentTitle}! 🐻`,`https://images2.minutemediacdn.com/image/upload/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/shape/cover/sport/dataimagepngbase64iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQ-5c25ab474761c20eff12f3747706b967.jpg`);
+    .setFooter(`Kuma chooses ${contentTitle}! 🐻`,VALORANT_LOGO);
 
     return msgEmeded;
 }
@@ -39,8 +40,8 @@ export const failMsgEmbeded = (author: User, errorMessage: string): MessageEmbed
     .setColor('#ff3333')
     .setAuthor(author.username, author.avatarURL() || undefined)
     .addField("Kuma is angry", errorMessage)
-    .setImage('https://media1.tenor.com/images/387adb2cfa06323f299aec4ab5e399c7/tenor.gif?itemid=12620072')
-    .setFooter("Hmmmppfff!!", "https://i.pinimg.com/originals/99/bd/db/99bddb525be85bb8619a75db8675d268.png");
+    .setImage(ANGRY_BEAR_GIF)
+    .setFooter("Hmmmppfff!!", ANGRY_BEAR_STATIC);
 
     return msgEmeded;
 }

@@ -1,6 +1,7 @@
 import { Message } from "discord.js";
-import { chooseWeapon, chooseImage } from "../helpers/valorant";
+import { chooseWeapon } from "../helpers/valorant";
 import { successMsgEmbeded, failMsgEmbeded } from "../helpers/discord";
+import { MSG_TIMEOUT } from "../properties";
 
 module.exports = {
     name: 'weapon',
@@ -11,17 +12,17 @@ module.exports = {
 
             if (!/^[0-9]*$/.test(budget)){
                 return message.channel.send(failMsgEmbeded(message.author, "must input number!!"))
-                .then(msg => msg.delete({ timeout: 5000}));
+                .then(msg => msg.delete({ timeout: MSG_TIMEOUT}));
             } 
 
             const weapon = chooseWeapon(parseInt(budget));
 
-            const msgEmeded = successMsgEmbeded(message.author, 
-                chooseImage(weapon.name),
+            const msgEmbeded = successMsgEmbeded(message.author, 
+                weapon.imgUrl,
                 weapon.name,
                 `${weapon.category} - $${weapon.price}`);
 
-            message.channel.send(msgEmeded);
+            message.channel.send(msgEmbeded);
         }
     },
 };
