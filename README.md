@@ -44,3 +44,5 @@ npm install
         "eslint.validate": ["typescript"]
         }
     - Save the `settings.json` file. Now when you save any typescript file; all linting will be automatically fixed.
+2. To run ESLint on the whole project and automatically fix errors
+    - `npm run lint`
