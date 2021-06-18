@@ -1,6 +1,6 @@
 import ENV from './config';
-import { prefix } from './static_data.json';
-import { initDiscordClient, getCommandFiles } from './helpers/discord';
+import {prefix} from './static_data.json';
+import {initDiscordClient, getCommandFiles} from './helpers/discord';
 import p from 'path';
 
 const discordClient: any = initDiscordClient(ENV.TOKEN);
@@ -25,6 +25,6 @@ discordClient.on('message', (msg: any) => {
   try {
     discordClient.commands.get(command).execute(discordClient, msg, args);
   } catch (error) {
-    msg.reply('Sorry! There was an error trying to execute that command 🐻')
+    msg.reply('Sorry! There was an error trying to execute that command 🐻');
   }
 });

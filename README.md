@@ -28,3 +28,19 @@ npm install
 3. Run the command `heroku login`
 4. Run the command `heroku git:remote -a frozen-tor-28234` in the root directory of kuma-bot.
 5. Run the command `git push heroku main`
+
+
+## Linting
+1. To automatically fix linting errors on file save when using VS Code:
+    - Install the ESLint extension on VS Code
+    - Go to `Settings` and click the `Workspace` tab, then search for `save`.
+    - Make sure the `Editor: Format on Save` option is unchecked, as this will conflict with ESLint autofix.
+    - For the option `Editor: Code actions on Save`, click `Edit in settings.json` below it.
+    - Copy/paste this into the `settings.json` file:
+        {
+        "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+        },
+        "eslint.validate": ["typescript"]
+        }
+    - Save the `settings.json` file. Now when you save any typescript file; all linting will be automatically fixed.
