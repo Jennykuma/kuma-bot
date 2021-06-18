@@ -1,5 +1,5 @@
 {
-  "prefix": "woff",
+  "prefix": "kuma",
   "agents": ["Astra", "Breach", "Brimstone", "Cypher", "Jett", "Killjoy", "Omen", "Phoenix", "Raze", "Reyna", "Sage", "Skye", "Sova", "Viper", "Yoru"],
   "maps": ["Ascent", "Bind", "Breeze", "Haven", "Icebox", "Split"]
 }
