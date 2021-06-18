@@ -1,5 +1,4 @@
 import { getAgents, IAgent } from '../Agent';
-//import { maps } from '../static_data.json';
 import { getMaps, IMap } from '../Map';
 import { getChannel, getUsers } from './discord';
 import { getWeapons, IWeapon } from '../Weapon';
