@@ -15,7 +15,7 @@ export const getHelpArguments = (command:any): string => {
     if (args.length === 1) { return ` <${args}>`; }
 
     // example: <arg1> <arg2> etc
-    return ' ' + command.arguments.map((argument:any) => '<' + argument + '>').join(' ');
+    return command.arguments.map((argument:any) => ' <' + argument + '>').join(' ');
 }
 
 export const getCommandFiles = (discordClient: any, path: string): Array<String> => {
