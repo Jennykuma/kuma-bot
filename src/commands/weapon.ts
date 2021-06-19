@@ -5,7 +5,8 @@ import { MSG_TIMEOUT } from "../properties";
 
 module.exports = {
     name: 'weapon',
-    description: 'Returns a random weapon base on budget',
+    description: '🔫 Select a random weapon based on budget',
+    arguments: ['budget'],
     execute(discordClient: any, message: Message, args: Array<string>) {
         if (args.length === 1) {
             const budget = args[0];

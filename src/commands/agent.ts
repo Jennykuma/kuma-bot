@@ -7,7 +7,7 @@ import _ from "lodash";
 
 module.exports = {
 	name: 'agent',
-	description: 'Returns a random agent',
+	description: '😄 Select a random agent',
 	async execute(discordClient: any, message: Message, args: Array<string>) {
 
 		try {

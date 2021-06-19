@@ -9,6 +9,15 @@ export const initDiscordClient = (token: string): Client => {
     return discordClient;
 }
 
+export const getHelpArguments = (command:any): string => {
+    if (command.arguments == undefined) { return ''; }
+    const args = command.arguments;
+    if (args.length === 1) { return ` <${args}>`; }
+
+    // example: <arg1> <arg2> etc
+    return ' ' + command.arguments.map((argument:any) => '<' + argument + '>').join(' ');
+}
+
 export const getCommandFiles = (discordClient: any, path: string): Array<String> => {
     discordClient.commands = new Collection();
     return fs.readdirSync(p.join(path, 'commands'));
