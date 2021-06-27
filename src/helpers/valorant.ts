@@ -60,6 +60,8 @@ export const assignAgents = (discordClient: Client, msg: any): string => {
     }
   }
 
+  response += "\nI'm sorry if I picked an agent you don't own, please type `kuma agent` to re-roll.\n";
+
   response += '\n🐻 Good luck friends 🐻';
   return response;
 }
@@ -70,7 +72,7 @@ export const chooseAgent = (): string => {
 
 export const chooseAgentDetails = (): IAgent => {
   return agents[Math.floor(Math.random() * agents.length)];
-}; 
+};
 
 export const chooseAgents = (size: number): Array<String> => {
   let team: Set<String> = new Set();
