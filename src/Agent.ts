@@ -21,10 +21,10 @@ export const getAgents = (): IAgent[] => {
         { name: "Raze", role: DUELIST, imgUrl: "https://static.wikia.nocookie.net/valorant/images/c/c4/Raze_artwork.png/revision/latest/scale-to-width-down/326?cb=20200602020217" } as IAgent,
         { name: "Reyna", role: DUELIST, imgUrl: "https://static.wikia.nocookie.net/valorant/images/4/41/Reyna_artwork.png/revision/latest/scale-to-width-down/326?cb=20200602020340" } as IAgent,
         { name: "Sage", role: SENTINEL, imgUrl: "https://static.wikia.nocookie.net/valorant/images/1/1e/Sage_artwork.png/revision/latest/scale-to-width-down/326?cb=20200602020306" } as IAgent,
-        { name: "Skye", role: INITIATOR, imgUrl: "https://static.wikia.nocookie.net/valorant/images/d/d6/Skye_artwork.png/revision/latest?cb=20201013182515" } as IAgent,
+        { name: "Skye", role: INITIATOR, imgUrl: "https://static.wikia.nocookie.net/valorant/images/d/d6/Skye_artwork.png/revision/latest/scale-to-width-down/326?cb=20201013182515" } as IAgent,
         { name: "Sova", role: INITIATOR, imgUrl: "https://static.wikia.nocookie.net/valorant/images/6/61/Sova_artwork.png/revision/latest/scale-to-width-down/326?cb=20200602020314" } as IAgent,
         { name: "Viper", role: CONTROLLER, imgUrl: "https://static.wikia.nocookie.net/valorant/images/9/91/Viper_artwork.png/revision/latest/scale-to-width-down/326?cb=20200602020322" } as IAgent,
-        { name: "Yoru", role: DUELIST, imgUrl: "https://static.wikia.nocookie.net/valorant/images/1/1a/Yoru_artwork.png/revision/latest?cb=20210112180407" } as IAgent,
+        { name: "Yoru", role: DUELIST, imgUrl: "https://static.wikia.nocookie.net/valorant/images/1/1a/Yoru_artwork.png/revision/latest/scale-to-width-down/326?cb=20210112180407" } as IAgent,
         { name: "KAY/O", role: INITIATOR, imgUrl: "https://static.wikia.nocookie.net/valorant/images/a/a9/KAYO_artwork.png/revision/latest/scale-to-width-down/587?cb=20210622163116" } as IAgent
     ]
 }
