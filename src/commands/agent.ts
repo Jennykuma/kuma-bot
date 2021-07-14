@@ -15,7 +15,7 @@ module.exports = {
 			let ownedAgents = (await getOwnedAgents(userId));
 			let agent = chooseAgentDetails();
 
-			while (!ownedAgents.includes(agent.name)) {
+			while (!ownedAgents.includes(agent.name.replace('/', ''))) {
 				agent = chooseAgentDetails();
 			}
 
