@@ -4,7 +4,7 @@ import { successMsgEmbeded } from "../helpers/discord";
 
 module.exports = {
 	name: 'map',
-	description: 'Returns a randomized Valorant map',
+	description: '🗺️ Select a randomized Valorant map',
 	execute(discordClient: any, message: Message, args: Array<string>) {
 		const map = chooseMap();
 		const msgEmbeded = successMsgEmbeded(message.author,
