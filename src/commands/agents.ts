@@ -41,14 +41,14 @@ module.exports = {
 
                     instance.array[instance.page - 1].fields[1].value = "Yes"
 
-                    setDatabase(path, agent, true);
+                    setDatabase(path, agent.replace('/', ''), true);
                 },
                 '🔴': (_: any, instance: any) => {
                     let agent = nonFreeAgents[instance.page - 1]
 
                     instance.array[instance.page - 1].fields[1].value = "No"
 
-                    setDatabase(path, agent, false);
+                    setDatabase(path, agent.replace('/', ''), false);
                 }
             })
             .build()
