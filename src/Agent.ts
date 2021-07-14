@@ -25,6 +25,6 @@ export const getAgents = (): IAgent[] => {
         { name: "Sova", role: INITIATOR, imgUrl: "https://static.wikia.nocookie.net/valorant/images/6/61/Sova_artwork.png/revision/latest/scale-to-width-down/326?cb=20200602020314" } as IAgent,
         { name: "Viper", role: CONTROLLER, imgUrl: "https://static.wikia.nocookie.net/valorant/images/9/91/Viper_artwork.png/revision/latest/scale-to-width-down/326?cb=20200602020322" } as IAgent,
         { name: "Yoru", role: DUELIST, imgUrl: "https://static.wikia.nocookie.net/valorant/images/a/a1/Yoru2.png/revision/latest/scale-to-width-down/326?cb=20210112180407" } as IAgent,
-        { name: "KAY/O", role: INITIATOR, imgUrl: "https://static.wikia.nocookie.net/valorant/images/8/83/KAYO_KeyArt.png/revision/latest/scale-to-width-down/587?cb=20210622163116" } as IAgent
+        { name: "KAY\/O", role: INITIATOR, imgUrl: "https://static.wikia.nocookie.net/valorant/images/8/83/KAYO_KeyArt.png/revision/latest/scale-to-width-down/587?cb=20210622163116" } as IAgent
     ]
 }
