@@ -11,6 +11,8 @@ export const getMaps = (): IMap[] => {
         {name: "Breeze", location: "Atlantic Ocean", imgUrl: "https://static.wikia.nocookie.net/valorant/images/1/1e/Valorant_Loading_Breeze.png/revision/latest/scale-to-width-down/350?cb=20210427160616"},
         {name: "Haven", location: "Thrimphu, Bhutan", imgUrl: "https://static.wikia.nocookie.net/valorant/images/7/70/Loading_Screen_Haven.png/revision/latest/scale-to-width-down/350?cb=20200620202335"},
         {name: "Split", location: "Shibuya, Tokyo, Japan", imgUrl: "https://static.wikia.nocookie.net/valorant/images/d/d6/Loading_Screen_Split.png/revision/latest/scale-to-width-down/350?cb=20200620202349"},
-        {name: "Icebox", location: "Bennett Island, Sakha, Russia", imgUrl: "https://static.wikia.nocookie.net/valorant/images/3/34/Loading_Icebox.png/revision/latest/scale-to-width-down/350?cb=20201015084446"}
+        {name: "Icebox", location: "Bennett Island, Sakha, Russia", imgUrl: "https://static.wikia.nocookie.net/valorant/images/3/34/Loading_Icebox.png/revision/latest/scale-to-width-down/350?cb=20201015084446"},
+        {name: "Fracture", location: "Santa Fe, New Mexico", imgUrl: "https://static.wikia.nocookie.net/valorant/images/f/fc/Loading_Screen_Fracture.png/revision/latest/scale-to-width-down/350?cb=20210908143656"},
+        {name: "Pearl", location: "Lisbon, Portugal", imgUrl: "https://static.wikia.nocookie.net/valorant/images/a/af/Loading_Screen_Pearl.png/revision/latest/scale-to-width-down/350?cb=20220622132842"}
     ];
 }

@@ -1,7 +1,7 @@
 {
   "prefix": "kuma",
-  "agents": ["Astra", "Breach", "Brimstone", "Cypher", "Jett", "Killjoy", "Omen", "Phoenix", "Raze", "Reyna", "Sage", "Skye", "Sova", "Viper", "Yoru"],
+  "agents": ["Astra", "Breach", "Brimstone", "Cypher", "Jett", "Killjoy", "Omen", "Phoenix", "Raze", "Reyna", "Sage", "Skye", "Sova", "Viper", "Yoru", "KAY/O", "Chamber", "Neon", "Fade"],
   "freeAgents": ["Brimstone","Jett","Phoenix","Sage","Sova"],
-  "nonFreeAgents": ["Astra", "Breach", "Cypher", "Killjoy", "Omen", "Raze", "Reyna", "Skye", "Viper", "Yoru", "KAY/O"],
-  "maps": ["Ascent", "Bind", "Breeze", "Haven", "Icebox", "Split"]
+  "nonFreeAgents": ["Astra", "Breach", "Cypher", "Killjoy", "Omen", "Raze", "Reyna", "Skye", "Viper", "Yoru", "KAY/O", "Chamber", "Neon", "Fade"],
+  "maps": ["Ascent", "Bind", "Breeze", "Haven", "Icebox", "Split", "Fracture", "Pearl"]
 }
