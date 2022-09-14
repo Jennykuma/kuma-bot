@@ -25,6 +25,9 @@ export const getAgents = (): IAgent[] => {
         { name: "Sova", role: INITIATOR, imgUrl: "https://static.wikia.nocookie.net/valorant/images/6/61/Sova_artwork.png/revision/latest/scale-to-width-down/326?cb=20200602020314" } as IAgent,
         { name: "Viper", role: CONTROLLER, imgUrl: "https://static.wikia.nocookie.net/valorant/images/9/91/Viper_artwork.png/revision/latest/scale-to-width-down/326?cb=20200602020322" } as IAgent,
         { name: "Yoru", role: DUELIST, imgUrl: "https://static.wikia.nocookie.net/valorant/images/1/1a/Yoru_artwork.png/revision/latest/scale-to-width-down/326?cb=20210112180407" } as IAgent,
-        { name: "KAY/O", role: INITIATOR, imgUrl: "https://static.wikia.nocookie.net/valorant/images/a/a9/KAYO_artwork.png/revision/latest/scale-to-width-down/587?cb=20210622163116" } as IAgent
-    ]
+        { name: "KAY/O", role: INITIATOR, imgUrl: "https://static.wikia.nocookie.net/valorant/images/a/a9/KAYO_artwork.png/revision/latest/scale-to-width-down/587?cb=20210622163116" } as IAgent,
+        { name: "Chamber", role: SENTINEL, imgUrl: "https://static.wikia.nocookie.net/valorant/images/1/1d/Chamber_artwork_full.png/revision/latest/scale-to-width-down/350?cb=20220810202725" } as IAgent,
+        { name: "Neon", role: DUELIST, imgUrl: "https://static.wikia.nocookie.net/valorant/images/3/34/Neon_artwork_full.png/revision/latest/scale-to-width-down/326?cb=20220810202800" } as IAgent,
+        { name: "Fade", role: INITIATOR, imgUrl: "https://static.wikia.nocookie.net/valorant/images/e/e2/Fade_artwork_full.png/revision/latest/scale-to-width-down/326?cb=20220810202738"} as IAgent
+    ]   
 }
